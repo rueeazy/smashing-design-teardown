@@ -1,2 +1,480 @@
 @import url("reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+p {
+    font-family: 'Varela Round', sans-serif;
+}
+
+button {
+    font-family: 'Varela Round', sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+}
+
+/* Navbar */
+.navbar {
+    grid-column: 1;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: space-around;
+    background: #B0B0B0;
+}
+
+.navbar .logo {
+    align-self: center;
+    width: 200px;
+    height: 80px;
+    background-color: rgb(90, 90, 90);
+    border-radius: 8px;
+}
+
+.navbar ul {
+    align-self: center;
+    width: 50%;
+    height: 50px;
+    background-color: rgb(90, 90, 90);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+}
+
+.navbar .search-bar {
+    align-self: center;
+    width: 300px;
+    height: 60px;
+    background-color: rgb(90, 90, 90);
+    border-radius: 8px;
+}
+
+/* Main Styling */
+
+.main {
+    grid-column: 1;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+}
+
+/* Floater */
+
+.floater {
+    grid-column: 2 / span 2;
+    grid-row: 1 / 2;
+    z-index: 1;
+    display: grid;
+}
+
+.floater .header {
+    text-align: center;
+    font-size: 40px;
+    width: 50%;
+    height: fit-content;
+    background: white;
+    justify-self: center;
+    margin-top: 3rem;
+    font-family: 'Varela Round', sans-serif;
+}
+
+/* Articles Styling */
+
+/* Article 1 */
+.articles-1 {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.article-1 {
+    width: 100%;
+    height: 720px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.article-1.a,
+.article-1.d {
+    background: #909090;
+}
+
+.article-1.b,
+.article-1.c {
+    background: #A0A0A0;
+}
+
+.a1.icon {
+    grid-column: 1;
+    grid-row: 2;
+    height: 4rem;
+    width: 4rem;
+    margin-left: 4.5rem;
+    background: #505050;
+    border-radius: 20px;
+
+}
+
+.a1.writing {
+    justify-self: center;
+    grid-column: 1;
+    grid-row: 2;
+    width: 80%;
+    align-self: center;
+    font-size: 35px;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+}
+
+/* Article 2 */
+.articles-2 {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background: #E0E0E0;
+}
+
+.article-2 {
+    place-self: center;
+    width: 90%;
+    height: 700px;
+    margin: 10px;
+    border: 3px solid white;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.article-2 .a1 {
+    align-self: end;
+    color: black;
+    font-size: 30px;
+    text-decoration: underline;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.article-2 .a2 {
+    align-self: center;
+    color: black;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.article-2.d,
+.article-2.i {
+    background: #888888;
+}
+
+/* Article 3 */
+.articles-3 {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    background: #F5F5F5;
+}
+
+.article-3 {
+    place-self: center;
+    width: 80%;
+    height: 420px;
+    margin: 10px;
+    border: 3px solid white;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.article-3 .icon {
+    align-self: center;
+    grid-column: 1;
+    grid-row: 1;
+    width: 5rem;
+    height: 5rem;
+    background: grey;
+    border-radius: 20px;
+    margin-top: -10rem;
+}
+
+.article-3 .header {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+    margin-top: -10rem;
+    margin-left: 6rem;
+    font-size: 35px;
+}
+
+.article-3 .text {
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 6rem;
+    align-self: center;
+    width: 60%;
+}
+
+
+
+/* Membership */
+.membership {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    width: 100%;
+    height: 496px;
+    background: #686868;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 1fr 1fr;
+}
+
+.member-1,
+.member-2{
+    grid-column: 2;
+}
+
+.member-1 {
+    width: 50%;
+    align-self: center;
+    color: white;
+    font-size: 25px;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.member-2 {
+    align-self: center;
+    width: 40%;
+    height: 5rem;
+    font-size: 25px;
+    border-radius: 20px;
+    border: none;
+    font-family: 'Varela Round', sans-serif;
+}
+
+/* Big Box */
+.big-box {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+}
+
+.big-box-1 {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    width: 100%;
+    height: 700px;
+    background: #909090;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 1fr 1fr;
+}
+
+.big-box-1 p {
+    grid-column: 2;
+    place-self: center;
+    color: white;
+    font-size: 80px;
+    text-align: center;
+}
+
+.big-box-1 .filler-box {
+    justify-self: center;
+    grid-column: 2;
+    grid-row: 2;
+    width: 50%;
+    height: 50%;
+    background: #C8C8C8;
+    border-radius: 20px;
+}
+
+.big-box-2 {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    width: 100%;
+    height: 300px;
+    background: #F5F5F5;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+}
+
+.big-box-2 .icon {
+    grid-row: 1;
+    margin: 2rem;
+    background: #404040;
+    border-radius: 30px;
+}
+
+.big-box-2 p {
+    align-self: center;
+    font-size: 20px;
+    line-height: 2rem;
+}
+
+
+
+/* Book */
+.book {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 410px;
+    background: #686868;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.book .header {
+    grid-row: 1;
+    font-size: 60px;
+    color: white;
+    text-decoration: underline;
+    margin-left: 3rem;
+    align-self: center;
+}
+
+.book .text {
+    margin-left: 3rem;
+    align-self: center;
+    grid-row: 2;
+    width: 65%;
+    font-size: 21px;
+    color: white;
+}
+
+.book .button {
+    align-self: center;
+    height: 50%;
+    margin-left: 3rem;
+    width: 30%;
+    border-radius: 20px;
+    border: none;
+    font-size: 30px;
+}
+
+/* Guides */
+.guides {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    background: #D0D0D0;
+    place-items: center;
+}
+
+.guide.a,
+.guide.b {
+    width: 80%;
+    height: 420px;
+    margin: 10px;
+    border: 3px solid white;
+    border-radius: 8px;
+}
+
+.guide.c,
+.guide.d {
+    width: 80%;
+    height: 820px;
+    margin: 10px;
+    border: 3px solid white;
+    border-radius: 8px;
+}
+
+.guide.d {
+    background:	#606060;
+}
+
+.guide {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+}
+
+.guide .header {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 50px;
+    width: 80%;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    text-decoration: underline;
+}
+
+.guide .text {
+    width: 80%;
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 2rem;
+    align-self: center;
+    font-size: 20px;
+    line-height: 1.5rem;
+}
+
+.guide .button {
+    grid-column: 1;
+    grid-row: 1;
+    width: 65%;
+    height: 5rem;
+    align-self: center;
+    margin-top: 15rem;
+    margin-left: 2rem;
+    font-size: 25px;
+    border: none;
+    border-radius: 15px;
+}
+
+/* Footer */
+.footer {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 675px;
+    background: #808080;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.footer .type-1 {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    width: 80%;
+    justify-self: center;
+    align-self: center;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    line-height: 3rem;
+    word-spacing: 1rem;
+}
+
+.footer .type-2 {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: center;
+    align-self: center;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 8rem;
+}
+
+.footer .box-1 {
+    background: #A0A0A0;
+    margin: 4rem;
+    border-radius: 25px;
+}
+
+.footer .box-2 {
+    background: #D3D3D3;
+    margin: 4rem;
+    border-radius: 25px;
+}
+
 
